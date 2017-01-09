@@ -4,7 +4,7 @@
   #students
     - students.each do |student|
       .student
-        %h2= "#{student.first_name} #{student.last_name}"
+        %h2= "#{student.id} #{student.first_name} #{student.last_name}"
         %p= student.email
 - else
   %p There are no students yet.
