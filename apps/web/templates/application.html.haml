@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    = javascript 'https://code.jquery.com/jquery-2.1.1.min.js', 'application'
     = stylesheet 'bootstrap'
     = javascript 'bootstrap'
     %title Web
@@ -8,4 +9,14 @@
   %body
     .content
       .container
+        %nav.navbar.navbar-default
+          .collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li
+                %a.nav-item{ :href => '/'}Home
+              %li
+                %a.nav-item{ :href => '/students/new'}New Student
+              %li
+                %a.nav-item{:href => '/homeworks/new'}New Homework
+
         = yield

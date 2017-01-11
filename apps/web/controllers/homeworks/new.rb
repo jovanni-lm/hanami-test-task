@@ -1,4 +1,4 @@
-module Web::Controllers::Students
+module Web::Controllers::Homeworks
   class New
     include Web::Action
 

@@ -1,5 +1,5 @@
-module Web::Controllers::Students
-  class New
+module Web::Controllers::Homeworks
+  class Create
     include Web::Action
 
     def call(params)

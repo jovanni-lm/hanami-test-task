@@ -1,0 +1,19 @@
+%h2 All homeworks
+
+- if homeworks.any?
+  %table.table.table-hover#homeworks
+    %thead
+      %tr
+        %th #
+        %th Title
+        %th Link
+        %th Operations
+    %tbody
+    - homeworks.each do |homework|
+      %tr
+        %th{scope: 'row'}= homework.id
+        %td= homework.title
+        %td= homework.url
+        %td= link_to 'Edit', routes.edit_homework_path(id: homework.id)
+- else
+  %p There are no homeworks yet.

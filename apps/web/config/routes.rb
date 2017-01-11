@@ -3,7 +3,7 @@
 #
 # Example:
 # get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
-patch '/students/:id', to: 'students#update'
 
 resources :students, except: [:destroy]
+resources :homeworks, except: [:destroy]
 root to: 'students#index'

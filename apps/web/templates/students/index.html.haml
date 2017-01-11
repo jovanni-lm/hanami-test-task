@@ -1,10 +1,21 @@
 %h2 All students
 
 - if students.any?
-  #students
+  %table.table.table-hover#students
+    %thead
+      %tr
+        %th #
+        %th First Name
+        %th Last Name
+        %th Email
+        %th Links
+    %tbody
     - students.each do |student|
-      .student
-        %h2= "#{student.id} #{student.first_name} #{student.last_name}"
-        %p= student.email
+      %tr
+        %th{scope: 'row'}= student.id
+        %td= student.first_name
+        %td= student.last_name
+        %td= student.email
+        %td= link_to 'Edit', routes.edit_student_path(id: student.id)
 - else
   %p There are no students yet.

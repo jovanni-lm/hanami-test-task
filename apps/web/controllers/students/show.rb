@@ -1,7 +1,7 @@
 require_relative './set_student'
 
 module Web::Controllers::Students
-  class Edit
+  class Show
     include Web::Action
     include SetStudent
 
